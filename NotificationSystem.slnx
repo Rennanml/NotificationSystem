@@ -3,6 +3,9 @@
     <Project Path="src/NotificationSystem.Application/NotificationSystem.Application.csproj" />
     <Project Path="src/NotificationSystem.Domain/NotificationSystem.Domain.csproj" />
     <Project Path="src/NotificationSystem.Infrastructure/NotificationSystem.Infrastructure.csproj" />
+    <Project Path="src/NotificationAPI/NotificationAPI.csproj" />
   </Folder>
-  <Project Path="NotificationAPI/NotificationAPI.csproj" />
+  <Folder Name="/tests/">
+    <Project Path="tests/NotificationSystem.UnitTests/NotificationSystem.UnitTests.csproj" />
+  </Folder>
 </Solution>

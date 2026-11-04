@@ -1,0 +1,38 @@
+@NotificationAPI_HostAddress = http://localhost:5238
+
+### 1. Enviar Notificação por E-mail
+POST {{NotificationAPI_HostAddress}}/api/notification
+Content-Type: application/json
+
+{
+  "channel": "Email",
+  "recipient": "usuario@exemplo.com",
+  "subject": "Confirmação de Cadastro",
+  "content": "Olá, seu cadastro no sistema foi realizado com sucesso!"
+}
+
+### 2. Enviar Notificação por WhatsApp
+POST {{NotificationAPI_HostAddress}}/api/notification
+Content-Type: application/json
+
+{
+  "channel": "WhatsApp",
+  "recipient": "+5511999998888",
+  "content": "Seu código de verificação é 849201. Não compartilhe com ninguém."
+}
+
+### 3. Enviar Notificação por SMS
+POST {{NotificationAPI_HostAddress}}/api/notification
+Content-Type: application/json
+
+{
+  "channel": "Sms",
+  "recipient": "+5511988887777",
+  "content": "Sua fatura foi fechada. Pague até o vencimento."
+}
+
+### 4. Consultar Status da Notificação
+# Substitua pelo CorrelationId retornado no POST
+@correlationId = 00000000-0000-0000-0000-000000000000
+GET {{NotificationAPI_HostAddress}}/api/notification/{{correlationId}}
+Accept: application/json
