@@ -2,6 +2,7 @@
   <Folder Name="/src/">
     <Project Path="src/NotificationSystem.Application/NotificationSystem.Application.csproj" />
     <Project Path="src/NotificationSystem.Domain/NotificationSystem.Domain.csproj" />
+    <Project Path="src/NotificationSystem.Infrastructure/NotificationSystem.Infrastructure.csproj" />
   </Folder>
   <Project Path="NotificationAPI/NotificationAPI.csproj" />
 </Solution>
